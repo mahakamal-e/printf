@@ -9,11 +9,13 @@
 
 #define BUFSIZE 1024
 
+
 /**
  * struct conv_specifier - to match with the cinversion specifiers
  * @specifier: format passed
  * @f: pointer to function for conversiton spec
  *
+ * Description: struct to define the map for format specifiers
  */
 typedef struct conv_specifier
 {
