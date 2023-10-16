@@ -11,7 +11,6 @@ int _print_char(va_list args)
 
 	return (1);
 }
-
 /**
  * _print_string - print string
  * @args: list of argum
@@ -31,7 +30,6 @@ int _print_string(va_list args)
 	}
 	return (length);
 }
-
 /**
  * _print_percent - print the % sign
  * @args: list of arg

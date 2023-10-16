@@ -11,33 +11,31 @@ int _printf(const char *format, ...)
 		{"%%", _print_percent}
 	};
 	va_list arguments;
-	int i = 0, j = 0, count = 0;
+	int i = 0, length = 0;
 
 	va_start(arguments, format);
-	if ((format[0] == '%' && format[1] == '\0') || format == NULL)
-		return (-1);
-	while (format[i] != '\0')
+	while (*format)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
-			for (j = 0; j < (int)(sizeof(h_list) / sizeof(h_list[0])); j++)
+			format++;
+			/* Loop through struct to find the correct func */
+			for (i = 0; h_list[i].specifier; i++)
 			{
-				if ((h_list[j].specifier[0] == format[i]) &&
-						(h_list[j].specifier[1] == format[i + 1]))
+				if (*format == *(h_list[i].specifier))
 				{
-					count += h_list[j].f(arguments);
-					i = i + 2;
+					length += h_list[i].f(arguments);
 					break;
 				}
 			}
+			format++;
 		}
 		else
 		{
-		_putchar(format[i]);
-		count++;
+		length += _putchar(format[i]);
+		format++;
 		}
-		i++;
 	}
 	va_end(arguments);
-	return (count);
+	return (length);
 }
