@@ -10,7 +10,7 @@
 #define BUFSIZE 1024
 
 /**
- * conv_specifier - to match with the cinversion specifiers
+ * struct conv_specifier - to match with the cinversion specifiers
  * @specifier: format passed
  * @f: pointer to function for conversiton spec
  *
@@ -26,8 +26,7 @@ int _printf(const char *format, ...);
 int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_percent(__attribute__((unused))va_list args);
-int _print_decimal(va_list args);
 int _print_int(va_list args);
-
+int get_integer(va_list list);
 
 #endif

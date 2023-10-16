@@ -1,4 +1,4 @@
-0x11. C - printf Project 
+0x11. C - printf Project
 
 Description:
 The C library function int printf(const char *format, ...) sends formatted output to stdout.
@@ -8,7 +8,7 @@ _printf
 write our own printf function
 
 
-Tasks required for this project 
+Tasks required for this project
 0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
 write a function that produces output according to a format.
 Handle the following conversion specifiers:

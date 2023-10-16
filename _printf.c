@@ -8,7 +8,8 @@ int _printf(const char *format, ...)
 {
 	specifier_match h_list[] = {
 		{"c", _print_char}, {"s", _print_string},
-		{"%%", _print_percent}
+		{"%", _print_percent},
+		{"i", _print_int}, {"d", _print_int},
 	};
 	va_list arguments;
 	int i = 0, j = 0, count = 0;
@@ -34,7 +35,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-		_putchar(format[i]);
+		_putchar(*format);
 		count++;
 		}
 		i++;
