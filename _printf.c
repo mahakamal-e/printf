@@ -8,12 +8,9 @@ int _printf(const char *format, ...)
 {
 	specifier_match h_list[] = {
 		{"c", _print_char}, {"s", _print_string},
-<<<<<<< HEAD
 		{"%", _print_percent},
 		{"i", _print_int}, {"d", _print_int},
-=======
 		{"%", _print_percent}
->>>>>>> 5441392fd8a51f8b957a45a884e5e69e81fc09df
 	};
 	va_list arguments;
 	int i = 0, length = 0;
@@ -37,13 +34,9 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-<<<<<<< HEAD
 		_putchar(*format);
-		count++;
-=======
 		length += _putchar(*format);
 		format++;
->>>>>>> 5441392fd8a51f8b957a45a884e5e69e81fc09df
 		}
 	}
 	va_end(arguments);
