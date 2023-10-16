@@ -8,7 +8,6 @@
 int _print_char(va_list args)
 {
 	_putchar(va_arg(args, int));
-
 	return (1);
 }
 /**
@@ -20,15 +19,17 @@ int _print_char(va_list args)
 int _print_string(va_list args)
 {
 	char *str;
-	int length = 0;
+	int count;
 
 	str = va_arg(args, char *);
-	while (*str != '\0')
+	if (!str)
+		str = "(null)";
+	while (*str)
 	{
-		length += _putchar(*str);
+		count += _putchar(*str);
 		str++;
 	}
-	return (length);
+	return (count);
 }
 /**
  * _print_percent - print the % sign

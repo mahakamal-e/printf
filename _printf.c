@@ -8,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	specifier_match h_list[] = {
 		{"c", _print_char}, {"s", _print_string},
-		{"%%", _print_percent}
+		{"%", _print_percent}
 	};
 	va_list arguments;
 	int i = 0, length = 0;
@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-		length += _putchar(format[i]);
+		length += _putchar(*format);
 		format++;
 		}
 	}
