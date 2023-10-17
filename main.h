@@ -25,10 +25,12 @@ int (*f)(va_list);
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int handle_specifier(const char *specifier, va_list args);
 int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_percent(__attribute__((unused))va_list args);
 int _print_int(va_list args);
 int get_integer(va_list list);
+
 
 #endif
