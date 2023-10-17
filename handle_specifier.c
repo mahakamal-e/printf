@@ -7,7 +7,6 @@
  *
  * Return: bytes to return
  */
-
 int handle_specifier(const char *specifier, va_list args)
 {
 	specifier_match h_list[] = {
