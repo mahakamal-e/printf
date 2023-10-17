@@ -17,8 +17,7 @@ int handle_specifier(const char *specifier, va_list args)
 		{"b", _print_binary},
 		{NULL, NULL}
 	};
-
-	int i;
+        int i;
 	int count = 0;
 
 	if (specifier == NULL)
