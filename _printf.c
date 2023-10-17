@@ -20,7 +20,6 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			/* Loop through struct to find the correct func */
 			for (i = 0; h_list[i].specifier; i++)
 			{
 				if (*format == *(h_list[i].specifier))
@@ -28,6 +27,11 @@ int _printf(const char *format, ...)
 					length += h_list[i].f(arguments);
 					break;
 				}
+			}
+			if (!h_list[i].specifier)
+			{
+				length += _putchar('%');
+				length += _putchar(*format);
 			}
 			format++;
 		}
