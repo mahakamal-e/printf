@@ -1,7 +1,4 @@
 #include "main.h"
-int _print_char(va_list args);
-int _print_string(va_list args);
-int _print_percent(__attribute__((unused))va_list args);
 /**
  * _print_char - print character
  * @args: list of arguments
