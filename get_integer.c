@@ -1,40 +1,40 @@
 #include "main.h"
 /**
  * get_integer - print number
- * @list: list of args
+ * @list: list of arguments of numbers
  *
- * Return: The number from the arguments list
+ * Return: returns the length of the string that printed
  */
 int get_integer(va_list list)
 {
-	int number, length, num_digits;
+	int number, count;
 	int divisor;
-	int temp;
+	/* handle negative numbers */
+	unsigned int p_number;
 
 	number = va_arg(list, int);
-	temp = number;
-	length = 0;
-	num_digits = 0;
 	divisor = 1;
+
 
 	if (number < 0)
 	{
-		length += _putchar('-');
-		number = number * -1;
+		count += _putchar('-');
+		p_number = number * -1;
 	}
-
-	while (temp != 0)
+	else
 	{
-		temp = temp / 10;
-		num_digits++;
+		p_number = number;
 	}
-	for (; number / divisor > 9;)
+	for (; p_number / divisor > 9;)
 		divisor = divisor * 10;
+
+
+	/* repeatedly divides it by 10 until reach to 0*/
 	for (; divisor != 0; )
 	{
-		length += _putchar('0' + (number / divisor));
-		number %= divisor;
-		divisor /= 10;
+		count += _putchar('0' + (p_number / divisor));
+		p_number = p_number % divisor;
+		divisor = divisor / 10;
 	}
-	return (length);
+	return (count);
 }
