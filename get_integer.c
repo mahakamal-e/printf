@@ -14,7 +14,7 @@ int get_integer(va_list list)
 
 	number = va_arg(list, int);
 	divisor = 1;
-
+	count = 0;
 
 	if (number < 0)
 	{

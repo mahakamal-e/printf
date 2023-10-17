@@ -12,10 +12,9 @@ int handle_specifier(const char *specifier, va_list args)
 {
 	specifier_match h_list[] = {
 		{"c", _print_char},
-		{"s", _print_string},
-		{"%", _print_percent},
-		{"i", _print_int},
-		{"d", _print_int},
+		{"s", _print_string}, {"%", _print_percent},
+		{"i", _print_int}, {"d", _print_int},
+		{"b", _print_binary},
 		{NULL, NULL}
 	};
 

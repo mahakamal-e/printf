@@ -30,6 +30,7 @@ int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_percent(__attribute__((unused))va_list args);
 int _print_int(va_list args);
+int _print_binary(va_list args);
 int get_integer(va_list list);
 
 
