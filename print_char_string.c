@@ -26,7 +26,8 @@ int _print_string(va_list args)
 		str = "(null)";
 	while (*str)
 	{
-		count += write(1, str++, 1);
+		count += _putchar(*str);
+		str++;
 	}
 	return (count);
 }

@@ -3,7 +3,7 @@
  * _print_binary - get the binary number
  * @args: list of arguments
  *
- * Reaturn: the length of nuber to be printed
+ * Return: the length of nuber to be printed
  */
 int _print_binary(va_list args)
 {
