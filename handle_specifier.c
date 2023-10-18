@@ -17,11 +17,15 @@ int handle_specifier(const char *spec, va_list args)
 		{"b", _print_binary},
 		{"u", _print_unsigned},
 		{"o", _print_octal},
+		{NULL, NULL},
 	};
-
 	int i;
 	int count = 0;
 
+	if (spec == NULL)
+	{
+		return (-1);
+	}
 	for (i = 0; h_list[i].specifier; i++)
 	{
 		if (*spec == *(h_list[i].specifier))
