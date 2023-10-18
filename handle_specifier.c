@@ -4,19 +4,23 @@
  *
  * @spec: specifier that you have handle
  * @args: list of arguments
- *
  * Return: bytes to return
  */
 int handle_specifier(const char *spec, va_list args)
 {
 	specifier_match h_list[] = {
 		{"c", _print_char},
-		{"s", _print_string}, {"%", _print_percent},
-		{"i", _print_int}, {"d", _print_int},
+		{"s", _print_string},
+		{"%", _print_percent},
+		{"i", _print_int},
+		{"d", _print_int},
 		{"b", _print_binary},
+		{"u", _print_unsigned},
+		{"o", _print_octal},
 		{NULL, NULL}
 	};
-        int i;
+
+	int i;
 	int count = 0;
 
 	if (spec == NULL)

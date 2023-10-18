@@ -32,6 +32,8 @@ int _print_percent(__attribute__((unused))va_list args);
 int _print_int(va_list args);
 int _print_binary(va_list args);
 int get_integer(va_list list);
-
+int _print_unsigned(va_list args);
+int print_unsgined_int(unsigned int number);
+int _print_octal(va_list args);
 
 #endif
