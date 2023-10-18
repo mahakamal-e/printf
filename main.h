@@ -25,7 +25,7 @@ int (*f)(va_list);
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int handle_specifier(const char *specifier, va_list args);
+int handle_specifier(const char *spec, va_list args);
 int _print_char(va_list args);
 int _print_string(va_list args);
 int _print_percent(__attribute__((unused))va_list args);
