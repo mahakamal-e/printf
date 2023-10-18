@@ -2,11 +2,11 @@
 /**
  * handle_specifier - handle the specifer to the correct func
  *
- * @spec: specifier that you have handle
+ * @specifier: specifier that you have handle
  * @args: list of arguments
  * Return: bytes to return
  */
-int handle_specifier(const char *spec, va_list args)
+int handle_specifier(const char *specifier, va_list args)
 {
 	specifier_match h_list[] = {
 		{"c", _print_char},
@@ -22,13 +22,13 @@ int handle_specifier(const char *spec, va_list args)
 	int i;
 	int count = 0;
 
-	if (spec == NULL)
+	if (specifier == NULL)
 	{
 		return (-1);
 	}
 	for (i = 0; h_list[i].specifier; i++)
 	{
-		if (*spec == *(h_list[i].specifier))
+		if (*specifier == *(h_list[i].specifier))
 		{
 			count += h_list[i].f(args);
 			return (count);
@@ -36,6 +36,6 @@ int handle_specifier(const char *spec, va_list args)
 	}
 	/* handle unkown specifiers */
 	count += _putchar('%');
-	count += _putchar(*spec);
+	count += _putchar(*specifier);
 	return (count);
 }
