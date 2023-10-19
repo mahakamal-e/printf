@@ -19,18 +19,17 @@ int _print_char(va_list args)
 int _print_string(va_list args)
 {
 	char *str;
-	int count;
-	int i = 0;
+	int count = 0;
+	int i;
 	char _buffer_size[BUFSIZE];
 
 	str = va_arg(args, char *);
 
 	if (!str)
 		str = "(null)";
-	while (*str)
+	for (i = 0; str[i]; i++)
 	{
 		_buffer_size[i] = str[i];
-		i++;
 		count++;
 	}
 	write(1, _buffer_size, count);
