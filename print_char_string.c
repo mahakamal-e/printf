@@ -20,16 +20,21 @@ int _print_string(va_list args)
 {
 	char *str;
 	int count;
+	int i = 0;
+	char _buffer_size[BUFSIZE];
 
 	str = va_arg(args, char *);
+
 	if (!str)
 		str = "(null)";
 	while (*str)
 	{
-		count += write(1, str, 1);
-		str++;
-
+		_buffer_size[i] = str[i];
+		i++;
+		count++;
 	}
+	write(1, _buffer_size, count);
+
 	return (count);
 }
 /**
