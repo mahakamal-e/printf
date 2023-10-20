@@ -18,7 +18,6 @@ int handle_specifier(const char *specifier, va_list args)
 		{"u", _print_unsigned},
 		{"o", _print_octal},
 		{"x", _print_hexadecimal},
-		{"X", _print_HEXAdecimal},
 		{NULL, NULL},
 	};
 	int i;
