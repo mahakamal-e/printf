@@ -12,7 +12,7 @@
 
 /**
  * struct conv_specifier - to match with the cinversion specifiers
- * @specifier: format passed
+ * @specifier: format _passed
  * @f: pointer to function for conversiton spec
  *
  * Description: struct to define the map for format specifiers
