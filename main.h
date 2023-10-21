@@ -35,7 +35,7 @@ int get_integer(va_list list);
 int _print_unsigned(va_list args);
 int print_unsgined_int(unsigned int number);
 int _print_octal(va_list args);
-int _print_HEXAdecimal(va_list args);
+int _print_hexdecimal(va_list args);
 int _print_hexadecimal(va_list args);
 
 #endif

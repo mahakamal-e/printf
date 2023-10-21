@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _print_HEXAdecimal - print a decimal number in upper case
+ * _print_hexdecimal - print a decimal number in upper case
  * @args: list of arguments
  *
  * Return: number of bytes to printed
  */
-int _print_HEXAdecimal(va_list args)
+int _print_hexdecimal(va_list args)
 {
 	unsigned int number, temp_num;
 	int iterat;
@@ -30,19 +30,16 @@ int _print_HEXAdecimal(va_list args)
 		list[iterat] = temp_num % 16;
 		temp_num = temp_num / 16;
 	}
-
 	iterat = len - 1;
-
 	while (iterat >= 0)
 	{
 		if (list[iterat] > 9)
 		{
 			list[iterat] = list[iterat] + 7;
 		}
-			_putchar(list[iterat] + '0');
-			iterat--;
+		_putchar(list[iterat] + '0');
+		iterat--;
 	}
 	free(list);
 	return (len);
 }
-
